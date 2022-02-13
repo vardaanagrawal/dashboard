@@ -1,38 +1,271 @@
-.App {
-  text-align: center;
+.App{
+    height: 100vh;
+    width: 100%;
+    display: flex;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.navbar_{
+    height: 100vh;
+    width: 250px;
+    border: solid black 1px;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.logo{
+    font-size: xx-large;
+    font-weight: bold;
+    text-align: center;
+    padding: 30px 0px;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+.logo button{
+    margin: -5px 10px;
+    display: none;
+    background: none;
+    border: none;
 }
 
-.App-link {
-  color: #61dafb;
+.navsvg{
+    margin: 0px 20px;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+a{
+    text-decoration: none;
+    color: black;
+}
+
+.accordion-item{
+    border: none;
+}
+
+
+
+
+
+
+
+
+
+
+
+.page1,.page2{
+    height: 100vh;
+    width: 80%;
+    padding: 30px 50px;
+}
+
+.buttons{
+    display: flex;
+    justify-content: flex-end;
+}
+.buttons button{
+    margin-right: 10px;
+    background: none;
+    border: solid 3px blueviolet;
+    color: blueviolet;
+}
+
+.box1{
+    height: 250px;
+    width: 100%;
+    background-color: rgba(192, 192, 192, 0.534);
+    margin: 50px 0px 20px 0px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    text-align: center;
+}
+
+.box2{
+    height: 250px;
+    width: 100%;
+    border: solid rgb(2, 160, 2) 8px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    text-align: center;
+}
+.boxhead{
+    font-weight: 500;
+}
+.boxbtn{
+    margin: 10px 0px;
+}
+.boxbtn button, .p2head button{
+    background-color: blueviolet;
+    border: none;
+    color: white;
+    padding: 5px 10px;
+}
+
+
+
+
+
+
+
+
+.srchbox{
+    margin: 30px 0px;
+}
+.srchbox button{
+    border: solid black 1px;
+    color: blueviolet;
+    font-weight: 500;
+    padding: 0px 15px;
+}
+.srchbox input{
+    width: 70%;
+    margin-left: 10px;
+}
+
+.p2card{
+    height: 250px;
+    width: 300px;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: space-around;
+    border: solid black 0.5px;
+    padding: 0px 5px;
+}
+
+.p2card img{
+    height: 150px;
+    width: auto;
+}
+
+.cardhead{
+    color: blueviolet;
+    font-weight: 400;
+}
+
+.p2svgbox{
+    height: 30px;
+    width: 100%;
+    display: flex;
+    justify-content: space-evenly;
+    background-color: rgb(221, 217, 217);
+    padding: 6px;
+}
+
+.ccpopbox{
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100vh;
+    width: 100%;
+    background-color: rgba(255, 255, 255, 0.692);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.ccpopinner{
+    height: 350px;
+    width: 600px;
+    background-color: white;
+    border: solid silver 1px;
+    box-shadow: rgba(0, 0, 0, 0.575) 1px 1px 20px 1px;
+}
+
+.ccinnerhead{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px 20px;
+}
+
+.ccinnerhead button{
+    background: none;
+    border: solid silver 0.5px;
+}
+
+.ccinnerbody{
+    display: flex;
+    flex-direction: column;
+    padding: 20px;
+    height: 250px;
+    justify-content: space-evenly;
+}
+
+.ccinnerbody button{
+    width: 100px;
+    margin-top: 20px;
+    background-color: blueviolet;
+    color: white;
+    border: none;
+    padding: 5px;
+}
+
+
+
+@media only screen and (max-width: 900px){
+    .App{
+        flex-direction: column;
+    }
+    .navbar_{
+        height: 60px;
+        width: 100%;
+    }
+    .logo{
+        text-align: start;
+        padding: 5px 0px;
+    }
+    .logo button{
+        display: inline;
+    }
+    .accordion{
+        position: absolute;
+        left: -250px;
+        top: 60px;
+        height: 90vh;
+        background-color: white;
+        transition: all 0.5s;
+    }
+    .page2{
+        width: 100%;
+    }
+    .page1{
+        width: 100%;
+        padding: 10px;
+    }
+}
+
+
+@media only screen and (max-width: 680px){
+    .page2{
+        padding: 30px 15px;
+    }
+    
+    .p2head{
+        flex-direction: column;
+        align-items: flex-start;
+    }
+}
+
+@media only screen and (max-width: 440px){
+    .srchbox{
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+    }
+    .srchbox input{
+        width: 100%;
+        margin: 10px 0px;
+    }
+    .buttons{
+        justify-content: flex-start;
+    }
+}
+
+@media only screen and (max-width: 320px){
+    .p2card{
+        width: 100%;
+    }
+    .p2card img{
+        width: 90%;
+        height: auto;
+    }
 }
